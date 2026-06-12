@@ -198,7 +198,6 @@ const searchSuggestions = [
   { text: "Figma UI/UX Designer", tag: "Baru", icon: "fas fa-palette" },
   { text: "Konsultasi Infrastruktur IT", tag: "Unggulan", icon: "fas fa-handshake" },
   { text: "Integrasi AI & Chatbot", tag: "Populer", icon: "fas fa-brain" }
-];hart-bar" }
 ];
 
 
