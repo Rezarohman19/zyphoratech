@@ -9,8 +9,8 @@ const products = [
     name: "Senior Fullstack Developer (React/Node.js)",
     category: "Software",
     description: "Profesional IT berpengalaman dalam membangun aplikasi web skala besar dengan React, Node.js, dan arsitektur database modern.",
-    price: 199.99,
-    originalPrice: 249.99,
+    price: 3000000,
+    originalPrice: 3750000,
     rating: 4.9,
     reviews: 2847,
     badge: "hot",
@@ -22,8 +22,8 @@ const products = [
     name: "Cloud Architect & DevOps Engineer",
     category: "Cloud",
     description: "Spesialis AWS, GCP, Docker, dan Kubernetes untuk migrasi sistem, otomatisasi, dan arsitektur cloud berkinerja tinggi.",
-    price: 249.99,
-    originalPrice: 299.99,
+    price: 3750000,
+    originalPrice: 4500000,
     rating: 4.8,
     reviews: 1923,
     badge: "new",
@@ -35,7 +35,7 @@ const products = [
     name: "Cybersecurity & Pentester Specialist",
     category: "Cybersecurity",
     description: "Audit keamanan siber lengkap, pengujian penetrasi (pentest), serta implementasi firewall dan pertahanan data UKM.",
-    price: 299.99,
+    price: 4500000,
     originalPrice: null,
     rating: 4.9,
     reviews: 1089,
@@ -48,8 +48,8 @@ const products = [
     name: "IT Strategy & Infrastructure Consultant",
     category: "Konsultasi IT",
     description: "Perancangan arsitektur teknologi bisnis, penyusunan roadmap IT, audit sistem, dan perencanaan kapasitas infrastruktur.",
-    price: 189.99,
-    originalPrice: 229.99,
+    price: 2850000,
+    originalPrice: 3450000,
     rating: 4.7,
     reviews: 1567,
     badge: "sale",
@@ -61,8 +61,8 @@ const products = [
     name: "Data Scientist & AI Engineer",
     category: "Data & AI",
     description: "Membangun model AI/ML khusus, dasbor visualisasi data bisnis, serta integrasi LLM (Large Language Models) kustom.",
-    price: 279.99,
-    originalPrice: 349.99,
+    price: 4200000,
+    originalPrice: 5250000,
     rating: 4.9,
     reviews: 892,
     badge: "new",
@@ -74,8 +74,8 @@ const products = [
     name: "UI/UX & Product Design Specialist",
     category: "UI/UX Design",
     description: "Desain antarmuka pengguna (UI) dan pengalaman pengguna (UX) web/mobile premium, lengkap dengan prototype interaktif.",
-    price: 149.99,
-    originalPrice: 199.99,
+    price: 2250000,
+    originalPrice: 3000000,
     rating: 4.8,
     reviews: 4231,
     badge: "sale",
@@ -87,7 +87,7 @@ const products = [
     name: "Mobile App Developer (Flutter/React Native)",
     category: "Software",
     description: "Pengembangan aplikasi seluler (iOS & Android) berkinerja tinggi, responsif, dan siap rilis di App Store/Play Store.",
-    price: 229.99,
+    price: 3450000,
     originalPrice: null,
     rating: 4.8,
     reviews: 2156,
@@ -100,8 +100,8 @@ const products = [
     name: "Database Administrator & Specialist",
     category: "Cloud",
     description: "Manajemen database relasional & NoSQL, backup terjadwal, pemulihan bencana, dan optimasi kinerja query lambat.",
-    price: 179.99,
-    originalPrice: 219.99,
+    price: 2700000,
+    originalPrice: 3300000,
     rating: 4.7,
     reviews: 1254,
     badge: null,
@@ -115,7 +115,7 @@ const aiRecommendations = [
     id: 101,
     name: "Setup CI/CD & Cloud Migration",
     category: "Cloud",
-    price: 129.99,
+    price: 1950000,
     reason: "Berdasarkan minat UKM Anda pada cloud, layanan ini mengotomatiskan deployment software secara aman.",
     matchScore: 97,
     icon: "fas fa-cloud",
@@ -125,7 +125,7 @@ const aiRecommendations = [
     id: 102,
     name: "Audit Keamanan Sistem & VPN",
     category: "Cybersecurity",
-    price: 149.99,
+    price: 2250000,
     reason: "Sangat disukai UKM yang mempekerjakan Developer — mengamankan akses kode dan server dari jarak jauh.",
     matchScore: 94,
     icon: "fas fa-shield-alt",
@@ -135,7 +135,7 @@ const aiRecommendations = [
     id: 103,
     name: "Figma UI/UX Design System",
     category: "UI/UX Design",
-    price: 99.99,
+    price: 1500000,
     reason: "Sedang tren! Template desain modern untuk mempercepat proses coding frontend tim Anda.",
     matchScore: 91,
     icon: "fas fa-palette",
@@ -145,7 +145,7 @@ const aiRecommendations = [
     id: 104,
     name: "Setup Data Pipeline & BI Dashboard",
     category: "Data & AI",
-    price: 179.99,
+    price: 2700000,
     reason: "Sempurna untuk analisis performa penjualan UKM Anda secara real-time di dasbor interaktif.",
     matchScore: 89,
     icon: "fas fa-chart-line",
@@ -461,8 +461,8 @@ function renderProducts(productList) {
         </div>
         <div class="product-card-footer">
           <div class="product-price">
-            <span class="current">$${product.price}</span>
-            ${product.originalPrice ? `<span class="original">$${product.originalPrice}</span>` : ''}
+            <span class="current">Rp ${product.price.toLocaleString('id-ID')}</span>
+            ${product.originalPrice ? `<span class="original">Rp ${product.originalPrice.toLocaleString('id-ID')}</span>` : ''}
           </div>
           <button class="product-card-cart-btn" onclick="event.stopPropagation(); addToCart(${product.id})" aria-label="Add to cart">
             <i class="fas fa-plus"></i>
@@ -532,8 +532,8 @@ function openProductModal(id) {
     </div>
     <div class="modal-footer">
       <div class="modal-price">
-        <span class="current">$${product.price}</span>
-        ${product.originalPrice ? `<span class="original">$${product.originalPrice}</span>` : ''}
+        <span class="current">Rp ${product.price.toLocaleString('id-ID')}</span>
+        ${product.originalPrice ? `<span class="original">Rp ${product.originalPrice.toLocaleString('id-ID')}</span>` : ''}
       </div>
       <button class="modal-add-btn" onclick="addToCart(${product.id}); closeProductModal();">
         <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
@@ -574,7 +574,7 @@ function initAIRecommendations() {
         <i class="fas fa-sparkles"></i> ${item.reason}
       </div>
       <div class="ai-pick-footer">
-        <span class="ai-pick-price">$${item.price}</span>
+        <span class="ai-pick-price">Rp ${item.price.toLocaleString('id-ID')}</span>
         <span class="ai-match-score">
           <i class="fas fa-bullseye"></i> ${item.matchScore}% cocok
         </span>
@@ -737,10 +737,25 @@ function initCart() {
   const cartBtn = document.getElementById('cartBtn');
   const closeBtn = document.getElementById('cartCloseBtn');
   const overlay = document.getElementById('cartOverlay');
+  const checkoutBtn = document.querySelector('.cart-checkout-btn');
 
   if (cartBtn) cartBtn.addEventListener('click', toggleCart);
   if (closeBtn) closeBtn.addEventListener('click', toggleCart);
   if (overlay) overlay.addEventListener('click', toggleCart);
+  
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) {
+        showToast('Keranjang Anda masih kosong!');
+        return;
+      }
+      showToast('Berhasil melakukan checkout!');
+      cart = [];
+      localStorage.setItem('zyphoraCart', JSON.stringify(cart));
+      updateCartUI();
+      toggleCart();
+    });
+  }
 }
 
 function toggleCart() {
@@ -811,7 +826,7 @@ function updateCartUI() {
         </div>
         <div class="cart-item-info">
           <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-price">$${item.price}</div>
+          <div class="cart-item-price">Rp ${item.price.toLocaleString('id-ID')}</div>
         </div>
         <button class="cart-item-remove" onclick="removeFromCart(${item.id})" aria-label="Hapus ${item.name} dari keranjang">
           <i class="fas fa-trash-alt"></i>
@@ -824,7 +839,7 @@ function updateCartUI() {
   const totalEl = document.querySelector('.cart-total-value');
   if (totalEl) {
     const total = cart.reduce((sum, item) => sum + item.price, 0);
-    totalEl.textContent = `$${total.toFixed(2)}`;
+    totalEl.textContent = `Rp ${total.toLocaleString('id-ID')}`;
   }
 }
 
