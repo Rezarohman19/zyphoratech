@@ -280,7 +280,7 @@ function initParticles() {
       this.speedX = (Math.random() - 0.5) * 0.5;
       this.speedY = (Math.random() - 0.5) * 0.5;
       this.opacity = Math.random() * 0.5 + 0.1;
-      this.color = ['#00d4ff', '#7c3aed', '#ec4899'][Math.floor(Math.random() * 3)];
+      this.color = ['#ff7b00', '#ffa200', '#ff4500'][Math.floor(Math.random() * 3)];
     }
 
     update() {
@@ -315,7 +315,7 @@ function initParticles() {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = '#00d4ff';
+          ctx.strokeStyle = '#ff7b00';
           ctx.globalAlpha = (1 - dist / 150) * 0.08;
           ctx.lineWidth = 0.5;
           ctx.stroke();

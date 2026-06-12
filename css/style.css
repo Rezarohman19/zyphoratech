@@ -9,34 +9,34 @@
 /* ── CSS Variables ── */
 :root {
   /* Colors */
-  --bg-primary: #06080f;
-  --bg-secondary: #0d1117;
-  --bg-card: rgba(15, 20, 35, 0.7);
-  --bg-glass: rgba(255, 255, 255, 0.04);
-  --bg-glass-hover: rgba(255, 255, 255, 0.08);
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-glass-hover: rgba(255, 255, 255, 0.15);
+  --bg-primary: #050505;
+  --bg-secondary: #0f0f0f;
+  --bg-card: rgba(18, 18, 18, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --bg-glass-hover: rgba(255, 255, 255, 0.06);
+  --border-glass: rgba(255, 255, 255, 0.06);
+  --border-glass-hover: rgba(255, 255, 255, 0.12);
 
-  --cyan: #00d4ff;
-  --cyan-glow: rgba(0, 212, 255, 0.3);
-  --purple: #7c3aed;
-  --purple-glow: rgba(124, 58, 237, 0.3);
-  --pink: #ec4899;
-  --pink-glow: rgba(236, 72, 153, 0.3);
+  --cyan: #ff7b00;
+  --cyan-glow: rgba(255, 123, 0, 0.25);
+  --purple: #ffa200;
+  --purple-glow: rgba(255, 162, 0, 0.25);
+  --pink: #ff4500;
+  --pink-glow: rgba(255, 69, 0, 0.25);
   --green: #10b981;
-  --orange: #f59e0b;
+  --orange: #ff7b00;
   --red: #ef4444;
 
-  --text-primary: #f0f4f8;
-  --text-secondary: rgba(240, 244, 248, 0.65);
-  --text-muted: rgba(240, 244, 248, 0.4);
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d4;
+  --text-muted: #888888;
 
-  --gradient-main: linear-gradient(135deg, #00d4ff, #7c3aed, #ec4899);
-  --gradient-card: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(124, 58, 237, 0.08));
-  --gradient-hover: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(124, 58, 237, 0.15));
-  --gradient-btn: linear-gradient(135deg, #00d4ff, #7c3aed);
-  --gradient-btn-hover: linear-gradient(135deg, #00bfe6, #6d28d9);
-  --gradient-hero: linear-gradient(180deg, transparent 0%, rgba(6, 8, 15, 0.8) 100%);
+  --gradient-main: linear-gradient(135deg, #ffa200, #ff7b00, #ff4500);
+  --gradient-card: linear-gradient(135deg, rgba(255, 123, 0, 0.04), rgba(255, 162, 0, 0.04));
+  --gradient-hover: linear-gradient(135deg, rgba(255, 123, 0, 0.1), rgba(255, 162, 0, 0.1));
+  --gradient-btn: linear-gradient(135deg, #ff7b00, #ffa200);
+  --gradient-btn-hover: linear-gradient(135deg, #e66f00, #e69200);
+  --gradient-hero: linear-gradient(180deg, transparent 0%, rgba(5, 5, 5, 0.8) 100%);
 
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -60,11 +60,11 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow-cyan: 0 0 20px rgba(0, 212, 255, 0.2), 0 0 40px rgba(0, 212, 255, 0.1);
-  --shadow-glow-purple: 0 0 20px rgba(124, 58, 237, 0.2), 0 0 40px rgba(124, 58, 237, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-glow-cyan: 0 0 20px rgba(255, 123, 0, 0.15), 0 0 40px rgba(255, 123, 0, 0.08);
+  --shadow-glow-purple: 0 0 20px rgba(255, 162, 0, 0.15), 0 0 40px rgba(255, 162, 0, 0.08);
 
   /* Transitions */
   --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
