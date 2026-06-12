@@ -2,228 +2,203 @@
    ZYPHORATECH — AI MARKETPLACE
    Main Application JavaScript
    ======================================== */
-
 // ── Product Data ──
 const products = [
   {
     id: 1,
-    name: "NeuraWrite Pro",
-    category: "AI Tools",
-    description: "Asisten penulisan AI canggih didukung GPT-5 dengan kolaborasi real-time, penyesuaian nada, dan dukungan multibahasa.",
-    price: 49.99,
-    originalPrice: 79.99,
+    name: "Senior Fullstack Developer (React/Node.js)",
+    category: "Software",
+    description: "Profesional IT berpengalaman dalam membangun aplikasi web skala besar dengan React, Node.js, dan arsitektur database modern.",
+    price: 199.99,
+    originalPrice: 249.99,
     rating: 4.9,
     reviews: 2847,
     badge: "hot",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-    features: ["Saran AI real-time", "Dukungan 50+ bahasa", "Optimasi SEO", "Pemeriksa plagiarisme", "Kolaborasi tim"]
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop",
+    features: ["Pengalaman 5+ Tahun", "React, Node.js, SQL/NoSQL", "Proses cepat <48 jam", "Dukungan penuh deployment", "Garansi kualitas kode"]
   },
   {
     id: 2,
-    name: "VisionAI Studio",
-    category: "AI Tools",
-    description: "Platform computer vision kelas perusahaan untuk pengenalan gambar, deteksi objek, dan kemampuan pencarian visual.",
-    price: 89.99,
-    originalPrice: 129.99,
+    name: "Cloud Architect & DevOps Engineer",
+    category: "Cloud",
+    description: "Spesialis AWS, GCP, Docker, dan Kubernetes untuk migrasi sistem, otomatisasi, dan arsitektur cloud berkinerja tinggi.",
+    price: 249.99,
+    originalPrice: 299.99,
     rating: 4.8,
     reviews: 1923,
     badge: "new",
-    image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&h=400&fit=crop",
-    features: ["API deteksi objek", "Pengenalan wajah", "Klasifikasi gambar", "Pelatihan model khusus", "Pemrosesan real-time"]
+    image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=600&h=400&fit=crop",
+    features: ["Sertifikasi AWS/GCP Professional", "Setup CI/CD pipeline", "Optimasi biaya cloud", "Uptime monitoring 99.9%", "Dukungan darurat 24/7"]
   },
   {
     id: 3,
-    name: "DataForge AI",
-    category: "Datasets",
-    description: "Koleksi terkurasi 10 juta+ dataset berlabel untuk pelatihan machine learning di 50+ kategori dan domain.",
-    price: 29.99,
+    name: "Cybersecurity & Pentester Specialist",
+    category: "Cybersecurity",
+    description: "Audit keamanan siber lengkap, pengujian penetrasi (pentest), serta implementasi firewall dan pertahanan data UKM.",
+    price: 299.99,
     originalPrice: null,
-    rating: 4.7,
-    reviews: 3412,
-    badge: null,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    features: ["10 juta+ titik data", "50+ kategori", "Pra-proses & bersih", "Pembaruan rutin", "Lisensi komersial"]
+    rating: 4.9,
+    reviews: 1089,
+    badge: "hot",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=600&h=400&fit=crop",
+    features: ["Vulnerability assessment", "Audit kepatuhan data", "Setup pertahanan firewall & VPN", "Pelatihan keamanan staf", "Respons insiden darurat"]
   },
   {
     id: 4,
-    name: "SynthVoice Engine",
-    category: "APIs",
-    description: "API text-to-speech ultra-realistis dengan 200+ suara, kontrol emosi, dan kemampuan streaming real-time.",
-    price: 39.99,
-    originalPrice: 59.99,
-    rating: 4.9,
+    name: "IT Strategy & Infrastructure Consultant",
+    category: "Konsultasi IT",
+    description: "Perancangan arsitektur teknologi bisnis, penyusunan roadmap IT, audit sistem, dan perencanaan kapasitas infrastruktur.",
+    price: 189.99,
+    originalPrice: 229.99,
+    rating: 4.7,
     reviews: 1567,
     badge: "sale",
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600&h=400&fit=crop",
-    features: ["200+ suara alami", "Kontrol emosi", "Streaming real-time", "Dukungan SSML", "Kloning suara khusus"]
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+    features: ["Roadmap IT jangka panjang", "Audit kelayakan infrastruktur", "Vendor management", "Disaster recovery plan", "Efisiensi biaya teknologi"]
   },
   {
     id: 5,
-    name: "DeepPredict ML",
-    category: "Models",
-    description: "Model analitik prediktif pra-latih untuk peramalan bisnis, penilaian risiko, dan analisis pasar.",
-    price: 149.99,
-    originalPrice: 199.99,
-    rating: 4.6,
+    name: "Data Scientist & AI Engineer",
+    category: "Data & AI",
+    description: "Membangun model AI/ML khusus, dasbor visualisasi data bisnis, serta integrasi LLM (Large Language Models) kustom.",
+    price: 279.99,
+    originalPrice: 349.99,
+    rating: 4.9,
     reviews: 892,
-    badge: "hot",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop",
-    features: ["Peramalan deret waktu", "Skoring risiko", "Deteksi anomali", "Pelatihan ulang otomatis", "Termasuk REST API"]
+    badge: "new",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    features: ["Integrasi API LLM (GPT-4/Gemini)", "Dasbor Business Intelligence", "Optimasi query SQL", "Prediksi analitik bisnis", "Data pipeline otomatis"]
   },
   {
     id: 6,
-    name: "ChatBot Builder",
-    category: "SaaS",
-    description: "Platform chatbot AI tanpa kode dengan pemahaman bahasa alami (NLU), penyebaran multi-kanal, dan dasbor analitik.",
-    price: 19.99,
-    originalPrice: 34.99,
+    name: "UI/UX & Product Design Specialist",
+    category: "UI/UX Design",
+    description: "Desain antarmuka pengguna (UI) dan pengalaman pengguna (UX) web/mobile premium, lengkap dengan prototype interaktif.",
+    price: 149.99,
+    originalPrice: 199.99,
     rating: 4.8,
     reviews: 4231,
     badge: "sale",
-    image: "https://images.unsplash.com/photo-1531746790095-e6b1258a235e?w=600&h=400&fit=crop",
-    features: ["Pembangun tanpa kode", "Mesin NLU", "Penyebaran multi-kanal", "Dasbor analitik", "Alur kerja khusus"]
+    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop",
+    features: ["Desain modern & responsive", "Figma prototype interaktif", "User research & testing", "Custom design system", "Revisi tak terbatas"]
   },
   {
     id: 7,
-    name: "PixelGen AI",
-    category: "AI Tools",
-    description: "Alat pembuatan dan pengeditan gambar bertenaga AI dengan transfer gaya, upscaling, dan pemrosesan batch.",
-    price: 59.99,
+    name: "Mobile App Developer (Flutter/React Native)",
+    category: "Software",
+    description: "Pengembangan aplikasi seluler (iOS & Android) berkinerja tinggi, responsif, dan siap rilis di App Store/Play Store.",
+    price: 229.99,
     originalPrice: null,
-    rating: 4.7,
+    rating: 4.8,
     reviews: 2156,
-    badge: "new",
-    image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop",
-    features: ["Pembuatan gambar dari teks", "Transfer gaya", "Upscaling 4K", "Pemrosesan batch", "Akses API"]
+    badge: "hot",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
+    features: ["Lintas platform (iOS/Android)", "Flutter & React Native", "Setup push notification", "Integrasi API pihak ketiga", "App store submission"]
   },
   {
     id: 8,
-    name: "SecureAI Shield",
-    category: "Plugins",
-    description: "Plugin keamanan siber bertenaga AI untuk deteksi ancaman, pemindaian kerentanan, dan respons insiden otomatis.",
-    price: 79.99,
-    originalPrice: 119.99,
-    rating: 4.9,
-    reviews: 1089,
+    name: "Database Administrator & Specialist",
+    category: "Cloud",
+    description: "Manajemen database relasional & NoSQL, backup terjadwal, pemulihan bencana, dan optimasi kinerja query lambat.",
+    price: 179.99,
+    originalPrice: 219.99,
+    rating: 4.7,
+    reviews: 1254,
     badge: null,
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=600&h=400&fit=crop",
-    features: ["Deteksi ancaman real-time", "Pemindaian kerentanan", "Respons insiden otomatis", "Laporan kepatuhan", "Pemantauan 24/7"]
+    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop",
+    features: ["Manajemen PostgreSQL, MySQL, Mongo", "Setup otomatisasi backup", "Pemulihan data (recovery)", "Tuning performa query", "Enkripsi data & privasi"]
   }
 ];
 
 const aiRecommendations = [
   {
     id: 101,
-    name: "AutoML Pipeline",
-    category: "Models",
-    price: 99.99,
-    reason: "Berdasarkan minat Anda pada alat data, alur AutoML ini mengotomatiskan pemilihan model dan penyetelan hiperparameter.",
+    name: "Setup CI/CD & Cloud Migration",
+    category: "Cloud",
+    price: 129.99,
+    reason: "Berdasarkan minat UKM Anda pada cloud, layanan ini mengotomatiskan deployment software secara aman.",
     matchScore: 97,
-    icon: "fas fa-robot",
+    icon: "fas fa-cloud",
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=200&h=200&fit=crop"
   },
   {
     id: 102,
-    name: "NLP Toolkit Pro",
-    category: "APIs",
-    price: 44.99,
-    reason: "Pengguna yang membeli NeuraWrite Pro juga menyukai toolkit NLP komprehensif ini untuk analisis sentimen.",
+    name: "Audit Keamanan Sistem & VPN",
+    category: "Cybersecurity",
+    price: 149.99,
+    reason: "Sangat disukai UKM yang mempekerjakan Developer — mengamankan akses kode dan server dari jarak jauh.",
     matchScore: 94,
-    icon: "fas fa-brain",
-    image: "https://images.unsplash.com/photo-1516110833967-0b5716ca1387?w=200&h=200&fit=crop"
+    icon: "fas fa-shield-alt",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=200&h=200&fit=crop"
   },
   {
     id: 103,
-    name: "AI Analytics Hub",
-    category: "SaaS",
-    price: 69.99,
-    reason: "Sedang tren di wilayah Anda! Platform analitik ini menyediakan wawasan bertenaga AI untuk kecerdasan bisnis.",
+    name: "Figma UI/UX Design System",
+    category: "UI/UX Design",
+    price: 99.99,
+    reason: "Sedang tren! Template desain modern untuk mempercepat proses coding frontend tim Anda.",
     matchScore: 91,
-    icon: "fas fa-chart-line",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=200&fit=crop"
+    icon: "fas fa-palette",
+    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=200&h=200&fit=crop"
   },
   {
     id: 104,
-    name: "CodeAssist AI",
-    category: "Plugins",
-    price: 34.99,
-    reason: "Pelengkap sempurna untuk toolkit Anda — asisten penyelesaian kode dan debugging bertenaga AI.",
+    name: "Setup Data Pipeline & BI Dashboard",
+    category: "Data & AI",
+    price: 179.99,
+    reason: "Sempurna untuk analisis performa penjualan UKM Anda secara real-time di dasbor interaktif.",
     matchScore: 89,
-    icon: "fas fa-code",
-    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=200&h=200&fit=crop"
-  },
-  {
-    id: 105,
-    name: "Speech Analytics",
-    category: "APIs",
-    price: 54.99,
-    reason: "Karena Anda melihat SynthVoice Engine, API analisis ucapan ini dapat menyempurnakan alur audio Anda.",
-    matchScore: 87,
-    icon: "fas fa-microphone-alt",
-    image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=200&h=200&fit=crop"
+    icon: "fas fa-chart-line",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=200&fit=crop"
   }
 ];
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "CTO di TechVenture",
-    text: "ZyphoraTech benar-benar mengubah cara kami mencari alat AI. Rekomendasi AI-nya sangat akurat — menghemat waktu riset dan pengujian kami berminggu-minggu.",
+    name: "Hendra Wijaya",
+    role: "Pemilik UKM Kerajinan Tangan",
+    text: "ZyphoraTech menyelamatkan peluncuran e-commerce kami. Kami kesulitan mencari programmer selama 2 bulan, namun di sini kami mendapatkan Fullstack Developer terverifikasi dalam waktu kurang dari 48 jam!",
     rating: 5,
-    avatar: "SC"
+    avatar: "HW"
   },
   {
-    name: "Marcus Rivera",
-    role: "ML Engineer di DataFlow",
-    text: "Kualitas dataset dan model terlatih di platform ini tidak tertandingi. DataForge AI saja menghemat waktu persiapan data tim kami selama berbulan-bulan.",
+    name: "Siti Rahma",
+    role: "Pendiri Start-up Retail Hijab",
+    text: "Masalah kami sebelumnya adalah proyek teknologi yang selalu terlambat akibat kekurangan SDM. Berkat layanan Cloud & DevOps berlangan di ZyphoraTech, infrastruktur kami selesai tepat waktu dan stabil.",
     rating: 5,
-    avatar: "MR"
+    avatar: "SR"
   },
   {
-    name: "Emily Watson",
-    role: "Product Manager di InnoAI",
-    text: "Saya telah mencoba setiap marketplace AI di luar sana, dan ZyphoraTech jauh lebih unggul dari yang lain. Kurasi dan kontrol kualitasnya luar biasa.",
+    name: "Bambang Susanto",
+    role: "Direktur Logistik Urban",
+    text: "Sebagai UKM, kami tidak punya budget untuk merekrut tim IT internal secara penuh. Model berlangganan ahli IT di ZyphoraTech memberikan kami konsultasi siber kelas enterprise dengan harga terjangkau.",
     rating: 5,
-    avatar: "EW"
+    avatar: "BS"
   },
   {
-    name: "David Park",
-    role: "Founder di AIStartup",
-    text: "Dari menemukan alat AI baru hingga menerapkannya dalam produksi, ekosistem ZyphoraTech membuat seluruh proses menjadi lancar. Benar-benar pengubah permainan.",
+    name: "Dewi Lestari",
+    role: "Product Owner di Kuliner Kita",
+    text: "Proses verifikasi dari ZyphoraTech benar-benar nyata. Desainer UI/UX yang kami sewa memberikan hasil figma yang sangat rapi dan siap diproses ke developer. Sangat membantu bisnis lokal!",
     rating: 5,
-    avatar: "DP"
-  },
-  {
-    name: "Lisa Tanaka",
-    role: "Data Scientist di Nexus",
-    text: "Pencarian bertenaga AI saja sudah sangat sepadan. Ia memahami kebutuhan saya lebih baik daripada saya sendiri! Menemukan model NLP yang sempurna dalam kurang dari 2 menit.",
-    rating: 4,
-    avatar: "LT"
-  },
-  {
-    name: "James Okonkwo",
-    role: "VP Engineering di ScaleAI",
-    text: "Kami telah menstandardisasi pengadaan AI kami melalui ZyphoraTech. Fitur perusahaan, kualitas API, dan verifikasi vendor memberi kami kepercayaan diri dalam setiap pembelian.",
-    rating: 5,
-    avatar: "JO"
+    avatar: "DL"
   }
 ];
 
 const trendingProducts = [
-  { name: "NeuraWrite Pro", category: "Alat Penulisan AI", sales: "12.4K", growth: "+28%", direction: "up", image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=100&h=100&fit=crop" },
-  { name: "ChatBot Builder", category: "Platform SaaS", sales: "9.8K", growth: "+22%", direction: "up", image: "https://images.unsplash.com/photo-1531746790095-e6b1258a235e?w=100&h=100&fit=crop" },
-  { name: "VisionAI Studio", category: "Visi Komputer", sales: "8.2K", growth: "+19%", direction: "up", image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=100&h=100&fit=crop" },
-  { name: "DataForge AI", category: "Koleksi Dataset", sales: "7.5K", growth: "+15%", direction: "up", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&h=100&fit=crop" },
-  { name: "SynthVoice Engine", category: "API Suara AI", sales: "6.1K", growth: "+12%", direction: "up", image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=100&h=100&fit=crop" }
+  { name: "Senior Fullstack Developer", category: "Software Development", sales: "1.2K", growth: "+32%", direction: "up", image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=100&h=100&fit=crop" },
+  { name: "Cloud Architect & DevOps", category: "Cloud & Infrastructure", sales: "920", growth: "+25%", direction: "up", image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=100&h=100&fit=crop" },
+  { name: "UI/UX Product Designer", category: "UI/UX & Product Design", sales: "850", growth: "+21%", direction: "up", image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=100&h=100&fit=crop" },
+  { name: "Cybersecurity Specialist", category: "Cybersecurity & Security", sales: "740", growth: "+18%", direction: "up", image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=100&h=100&fit=crop" }
 ];
 
 const searchSuggestions = [
-  { text: "Asisten penulisan AI", tag: "Tren", icon: "fas fa-pen-fancy" },
-  { text: "API pembuatan gambar", tag: "Populer", icon: "fas fa-image" },
-  { text: "Pemrosesan bahasa alami", tag: "Hot", icon: "fas fa-language" },
-  { text: "Model machine learning", tag: "Baru", icon: "fas fa-brain" },
-  { text: "Kit pengembangan chatbot", tag: "Unggulan", icon: "fas fa-robot" },
-  { text: "Alat visualisasi data", tag: "Populer", icon: "fas fa-chart-bar" }
+  { text: "Fullstack Developer React", tag: "Populer", icon: "fas fa-code" },
+  { text: "AWS DevOps Engineer", tag: "Tren", icon: "fas fa-cloud" },
+  { text: "Audit Keamanan Siber UKM", tag: "Hot", icon: "fas fa-user-shield" },
+  { text: "Figma UI/UX Designer", tag: "Baru", icon: "fas fa-palette" },
+  { text: "Konsultasi Infrastruktur IT", tag: "Unggulan", icon: "fas fa-handshake" },
+  { text: "Integrasi AI & Chatbot", tag: "Populer", icon: "fas fa-brain" }
+];hart-bar" }
 ];
 
 
