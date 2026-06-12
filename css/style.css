@@ -2633,3 +2633,110 @@ input, textarea, select {
   color: var(--text-primary);
   background: var(--bg-glass);
 }
+
+/* ── Problem & Solution Section ── */
+.problem-solution-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -3rem; /* overlap slightly with hero if needed */
+}
+
+.ps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.ps-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.ps-card:hover {
+  transform: translateY(-5px);
+}
+
+.problem-card:hover {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.solution-card:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.ps-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.ps-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.ps-icon.red {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--red);
+}
+
+.ps-icon.green {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--green);
+}
+
+.ps-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.ps-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ps-list li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.ps-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-weight: bold;
+}
+
+.solution-card .ps-list li::before {
+  content: "✓";
+  color: var(--green);
+}
+
+.ps-list strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .ps-grid {
+    grid-template-columns: 1fr;
+  }
+}
