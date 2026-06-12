@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZyphoraTech — Temukan alat AI, dataset, API, dan model terbaik di dunia. Marketplace premium untuk solusi kecerdasan buatan.">
+  <meta name="keywords" content="marketplace AI, kecerdasan buatan, machine learning, alat AI, dataset, API, SaaS">
+  <meta name="author" content="ZyphoraTech">
+  <meta name="theme-color" content="#06080f">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ZyphoraTech — Marketplace Berbasis AI">
+  <meta property="og:description" content="Temukan alat AI, dataset, API, dan model terbaik di dunia dalam satu marketplace premium.">
+  <meta property="og:type" content="website">
+
+  <title>ZyphoraTech — Marketplace Berbasis AI | Temukan Solusi AI Premium</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%2300d4ff'/><stop offset='100%25' style='stop-color:%237c3aed'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text y='68' x='50' text-anchor='middle' font-size='55' font-family='Arial' font-weight='bold' fill='white'>Z</text></svg>">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#" class="navbar-logo">
+        <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+        <span>ZyphoraTech</span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="navbar-search">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Cari alat AI, dataset, API..." autocomplete="off">
+          <span class="search-shortcut">Ctrl+K</span>
+        </div>
+        <div class="search-suggestions" id="searchSuggestions"></div>
+      </div>
+
+      <!-- Nav Links -->
+      <div class="navbar-links">
+        <a href="#categoriesSection" class="active">Jelajahi</a>
+        <a href="#productsSection">Produk</a>
+        <a href="#trendingSection">Trending</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <button class="nav-action-btn" id="cartBtn" aria-label="Keranjang belanja">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge cart-badge-count" style="display:none">0</span>
+        </button>
+        <button class="nav-action-btn" aria-label="Notifikasi">
+          <i class="fas fa-bell"></i>
+        </button>
+        <button class="nav-btn-primary">
+          <i class="fas fa-rocket" style="margin-right: 4px;"></i> Mulai Sekarang
+        </button>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-search">
+      <div class="search-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Cari alat AI...">
+      </div>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="#categoriesSection">Jelajahi</a>
+      <a href="#productsSection">Produk</a>
+      <a href="#trendingSection">Trending</a>
+      <a href="#" onclick="toggleCart(); return false;">Keranjang</a>
+    </div>
+  </div>
+
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="heroSection">
+    <!-- Particle Canvas -->
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+    <!-- Gradient Orbs -->
+    <div class="hero-gradient-orb orb-1"></div>
+    <div class="hero-gradient-orb orb-2"></div>
+    <div class="hero-gradient-orb orb-3"></div>
+
+    <div class="container">
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Marketplace Berbasis AI — Sudah Tersedia</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line">Temukan Masa Depan</span>
+          <span class="line"><span class="highlight">Solusi AI</span> Terbaik</span>
+        </h1>
+
+        <p class="hero-description">
+          Jelajahi 10.000+ alat AI premium, dataset, API, dan model terlatih — semuanya dikurasi oleh mesin rekomendasi cerdas kami untuk kebutuhan Anda.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#productsSection" class="btn-primary">
+            <i class="fas fa-compass"></i> Jelajahi Marketplace
+          </a>
+          <a href="#categoriesSection" class="btn-secondary">
+            <i class="fas fa-play-circle"></i> Tonton Demo
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">10K+</div>
+            <div class="hero-stat-label">Produk AI</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">50K+</div>
+            <div class="hero-stat-label">Pengguna Aktif</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">99.9%</div>
+            <div class="hero-stat-label">Uptime</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual -->
+      <div class="hero-visual">
+        <div class="hero-visual-card">
+          <div class="hero-card-header">
+            <h3><i class="fas fa-robot" style="color: var(--cyan); margin-right: 8px;"></i>Asisten AI</h3>
+            <span class="ai-badge">LIVE</span>
+          </div>
+          <div class="hero-ai-chat">
+            <div class="ai-chat-bubble user">
+              Carikan alat NLP terbaik untuk analisis sentimen
+            </div>
+            <div class="ai-chat-bubble ai">
+              Berdasarkan kebutuhan Anda, saya merekomendasikan <strong>NeuraWrite Pro</strong> — memiliki rating 4.9★ dan dilengkapi analisis sentimen canggih dengan dukungan 50+ bahasa. Ingin lihat opsi lainnya?
+            </div>
+            <div class="ai-typing">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Cards -->
+        <div class="hero-floating-card card-1">
+          <div class="float-icon cyan"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <div class="float-text">+2.847 Penjualan</div>
+            <div class="float-sub">Bulan ini</div>
+          </div>
+        </div>
+        <div class="hero-floating-card card-2">
+          <div class="float-icon green"><i class="fas fa-shield-alt"></i></div>
+          <div>
+            <div class="float-text">Terverifikasi AI</div>
+            <div class="float-sub">Kualitas terjamin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CATEGORIES ========== -->
+  <section class="section" id="categoriesSection">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <i class="fas fa-th-large"></i> Telusuri Kategori
+        </div>
+        <h2 class="section-title">Jelajahi <span class="gradient-text">Kategori</span> AI</h2>
+        <p class="section-subtitle">Temukan solusi AI mutakhir di setiap kategori — dari alat penulisan hingga computer vision dan lainnya.</p>
+      </div>
+
+      <div class="categories-grid">
+        <div class="category-card reveal reveal-delay-1">
+          <div class="category-icon cyan"><i class="fas fa-wand-magic-sparkles"></i></div>
+          <div class="category-name">Alat AI</div>
+          <div class="category-count">2.400+ produk</div>
+        </div>
+        <div class="category-card reveal reveal-delay-2">
+          <div class="category-icon purple"><i class="fas fa-database"></i></div>
+          <div class="category-name">Dataset</div>
+          <div class="category-count">1.800+ produk</div>
+        </div>
+        <div class="category-card reveal reveal-delay-3">
+          <div class="category-icon pink"><i class="fas fa-plug"></i></div>
+          <div class="category-name">API</div>
+          <div class="category-count">1.500+ produk</div>
+        </div>
+        <div class="category-card reveal reveal-delay-4">
+          <div class="category-icon green"><i class="fas fa-brain"></i></div>
+          <div class="category-name">Model</div>
+          <div class="category-count">2.100+ produk</div>
+        </div>
+        <div class="category-card reveal reveal-delay-1">
+          <div class="category-icon orange"><i class="fas fa-cloud"></i></div>
+          <div class="category-name">SaaS</div>
+          <div class="category-count">1.200+ produk</div>
+        </div>
+        <div class="category-card reveal reveal-delay-2">
+          <div class="category-icon red"><i class="fas fa-puzzle-piece"></i></div>
+          <div class="category-name">Plugin</div>
+          <div class="category-count">980+ produk</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FEATURED PRODUCTS ========== -->
+  <section class="section" id="productsSection">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <i class="fas fa-fire"></i> Produk Unggulan
+        </div>
+        <h2 class="section-title"><span class="gradient-text">Produk</span> AI Terbaik</h2>
+        <p class="section-subtitle">Produk pilihan yang terverifikasi AI dan dipercaya ribuan developer serta bisnis di seluruh dunia.</p>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="products-toolbar reveal">
+        <div class="products-filters">
+          <button class="filter-btn active" data-filter="All">Semua</button>
+          <button class="filter-btn" data-filter="AI Tools">Alat AI</button>
+          <button class="filter-btn" data-filter="Datasets">Dataset</button>
+          <button class="filter-btn" data-filter="APIs">API</button>
+          <button class="filter-btn" data-filter="Models">Model</button>
+          <button class="filter-btn" data-filter="SaaS">SaaS</button>
+          <button class="filter-btn" data-filter="Plugins">Plugin</button>
+        </div>
+        <div class="products-sort">
+          <select class="sort-select" id="productSort" aria-label="Urutkan produk">
+            <option value="featured">Unggulan</option>
+            <option value="price-low">Harga: Rendah ke Tinggi</option>
+            <option value="price-high">Harga: Tinggi ke Rendah</option>
+            <option value="rating">Rating Tertinggi</option>
+            <option value="popular">Paling Populer</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Products rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== AI RECOMMENDATIONS ========== -->
+  <section class="section ai-section" id="aiSection">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <i class="fas fa-sparkles"></i> Berbasis AI
+        </div>
+        <h2 class="section-title">Dipilih <span class="gradient-text">AI Untuk Anda</span></h2>
+        <p class="section-subtitle">Mesin rekomendasi cerdas kami menganalisis preferensi Anda untuk menampilkan produk AI yang paling relevan.</p>
+      </div>
+
+      <div class="ai-picks-scroll" id="aiPicksScroll">
+        <!-- AI picks rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== STATS ========== -->
+  <section class="section stats-section" id="statsSection">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal reveal-delay-1">
+          <div class="stat-icon cyan"><i class="fas fa-users"></i></div>
+          <div class="stat-value" data-target="50000" data-suffix="+">0</div>
+          <div class="stat-label">Pengguna Aktif</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div class="stat-icon purple"><i class="fas fa-box-open"></i></div>
+          <div class="stat-value" data-target="10000" data-suffix="+">0</div>
+          <div class="stat-label">Produk AI</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <div class="stat-icon pink"><i class="fas fa-handshake"></i></div>
+          <div class="stat-value" data-target="125000" data-suffix="+">0</div>
+          <div class="stat-label">Transaksi</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-4">
+          <div class="stat-icon green"><i class="fas fa-star"></i></div>
+          <div class="stat-value" data-target="99" data-suffix="%">0</div>
+          <div class="stat-label">Kepuasan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== TRENDING ========== -->
+  <section class="section" id="trendingSection">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <i class="fas fa-bolt"></i> Sedang Trending
+        </div>
+        <h2 class="section-title">Yang Sedang <span class="gradient-text">Trending</span></h2>
+        <p class="section-subtitle">Produk trending secara real-time berdasarkan kecepatan penjualan, minat pengguna, dan keterlibatan komunitas.</p>
+      </div>
+
+      <div class="trending-list" id="trendingList">
+        <!-- Trending items rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section" id="testimonialsSection">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <i class="fas fa-heart"></i> Testimoni
+        </div>
+        <h2 class="section-title">Dicintai <span class="gradient-text">Ribuan Pengguna</span></h2>
+        <p class="section-subtitle">Lihat apa kata developer, engineer, dan pemimpin bisnis tentang ZyphoraTech.</p>
+      </div>
+
+      <div class="testimonials-wrapper reveal">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <!-- Testimonials rendered by JS -->
+        </div>
+      </div>
+      <div class="testimonials-nav" id="testimonialDots">
+        <!-- Dots rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="newsletter-section" id="newsletterSection">
+    <div class="container">
+      <div class="newsletter-card reveal">
+        <div class="newsletter-icon">
+          <i class="fas fa-paper-plane"></i>
+        </div>
+        <h2 class="newsletter-title">Tetap Terdepan dengan <span class="gradient-text">Wawasan AI</span></h2>
+        <p class="newsletter-desc">Dapatkan rekomendasi mingguan, tren industri, dan penawaran eksklusif langsung ke email Anda.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" class="newsletter-input" placeholder="Masukkan alamat email Anda" required>
+          <button type="submit" class="newsletter-btn">Berlangganan <i class="fas fa-arrow-right"></i></button>
+        </form>
+        <div class="newsletter-success">
+          <i class="fas fa-check-circle"></i>
+          <span>Anda sudah berlangganan! Selamat datang di ZyphoraTech.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="navbar-logo">
+            <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+            <span>ZyphoraTech</span>
+          </a>
+          <p>Marketplace AI terbaik di dunia. Temukan, evaluasi, dan terapkan solusi AI terdepan dengan percaya diri.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+        <!-- Produk -->
+        <div class="footer-column">
+          <h4>Produk</h4>
+          <ul>
+            <li><a href="#">Alat AI</a></li>
+            <li><a href="#">Dataset</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Model</a></li>
+            <li><a href="#">SaaS</a></li>
+            <li><a href="#">Plugin</a></li>
+          </ul>
+        </div>
+
+        <!-- Perusahaan -->
+        <div class="footer-column">
+          <h4>Perusahaan</h4>
+          <ul>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Media Kit</a></li>
+            <li><a href="#">Mitra</a></li>
+          </ul>
+        </div>
+
+        <!-- Dukungan -->
+        <div class="footer-column">
+          <h4>Dukungan</h4>
+          <ul>
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">Dokumentasi</a></li>
+            <li><a href="#">Referensi API</a></li>
+            <li><a href="#">Komunitas</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 ZyphoraTech. Hak cipta dilindungi. Dibuat dengan <i class="fas fa-heart" style="color: var(--pink);"></i> dan AI.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#">Kebijakan Privasi</a>
+          <a href="#">Syarat & Ketentuan</a>
+          <a href="#">Pengaturan Cookie</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========== CART SIDEBAR ========== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> Keranjang Anda <span class="cart-count">0</span></h3>
+      <button class="cart-close" id="cartCloseBtn" aria-label="Tutup keranjang">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Keranjang Anda kosong</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-value">$0.00</span>
+      </div>
+      <button class="cart-checkout-btn">
+        <i class="fas fa-lock"></i> Checkout Aman
+      </button>
+    </div>
+  </aside>
+
+
+  <!-- ========== PRODUCT MODAL ========== -->
+  <div class="modal-overlay" id="productModal" onclick="if(event.target===this) closeProductModal()">
+    <div class="modal-content">
+      <div class="modal-image"></div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+
+  <!-- ========== TOAST CONTAINER ========== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>
